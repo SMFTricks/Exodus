@@ -3721,7 +3721,8 @@ ul.social li
 	float: left;
 	margin-left: 5px;
 }
-ul.social li .fa
+ul.social li .fa,
+ul.social li .fab
 {
 	border: 1px solid #444;
 	padding: 7px;
@@ -3735,7 +3736,8 @@ ul.social li .fa
 	text-align: center;
 	color: #444;
 }
-ul.social li .fa:hover
+ul.social li .fa:hover,
+ul.social li .fab:hover
 {
 	color: #fff;
 }
