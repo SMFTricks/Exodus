@@ -87,7 +87,7 @@ function template_html_above()
 	// The ?fin20 part of this link is just here to make sure browsers don't cache it wrongly.
 	echo '
 	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/bootstrap.css?fin20" />
-	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/font-awesome.css?fin20" />
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/index', $context['theme_variant'], '.css?fin20" />';
 
 	// Some browsers need an extra stylesheet due to bugs/compatibility issues.
@@ -103,8 +103,7 @@ function template_html_above()
 
 	// Here comes the JavaScript bits!
 	echo '
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script type="text/javascript" src="', $settings['theme_url'], '/scripts/exodus.js?fin20"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="text/javascript" src="', $settings['theme_url'], '/scripts/bootstrap.min.js?fin20"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
@@ -202,7 +201,7 @@ function template_body_above()
 
 			if($context['user']['is_logged'])
 				echo'
-				<li class="sign-out"><a href="' , $scripturl , '?action=logout;sesc=', $context['session_id'], '"><i class="fa fa-sign-out visible-xs"></i><span>', $txt['logout'] ,'</span></a></li>';
+				<li class="sign-out"><a href="' , $scripturl , '?action=logout;sesc=', $context['session_id'], '"><i class="fa fa-sign-out-alt visible-xs"></i><span>', $txt['logout'] ,'</span></a></li>';
 
 			else
 			{ 
@@ -304,21 +303,21 @@ function template_body_below()
 		if(!empty($settings['st_facebook_username']))
 			echo'
 				<li>
-					<a href="https://www.facebook.com/', $settings['st_facebook_username'] ,'" target="_blank" rel="noopener"><i class="fa fa-facebook fa-2x"></i></a>
+					<a href="https://www.facebook.com/', $settings['st_facebook_username'] ,'" target="_blank" rel="noopener"><i class="fab fa-facebook fa-2x"></i></a>
 				</li>';
 
 		// Twitter
 		if(!empty($settings['st_twitter_username']))
 			echo'			
 				<li>
-					<a href="https://www.twitter.com/', $settings['st_twitter_username'] ,'" target="_blank" rel="noopener"><i class="fa fa-twitter fa-2x"></i></a>
+					<a href="https://www.twitter.com/', $settings['st_twitter_username'] ,'" target="_blank" rel="noopener"><i class="fab fa-twitter fa-2x"></i></a>
 				</li>';
 
 		// Youtube
 		if(!empty($settings['st_youtube_username']))
 			echo'
 				<li>
-					<a href="https://www.youtube.com/user/', $settings['st_youtube_username'] ,'" target="_blank" rel="noopener"><i class="fa fa-youtube fa-2x"></i></a>
+					<a href="https://www.youtube.com/user/', $settings['st_youtube_username'] ,'" target="_blank" rel="noopener"><i class="fab fa-youtube fa-2x"></i></a>
 				</li>';
 
 		// RSS
@@ -332,7 +331,7 @@ function template_body_below()
 			</ul>
 			<ul class="reset">
 				<li class="copyright">', theme_copyright(), '</li>
-				<li class="copyright">Theme by <a href="https://smftricks.com/index.php">SMFTricks</a></li>
+				<li class="copyright">Theme by <a href="https://smftricks.com">SMFTricks</a></li>
 				<li class="copyright">', !empty($settings['st_custom_copyright']) ? $settings['st_custom_copyright'] : $context['forum_name'] . ' &copy;' , '</li>
 			</ul>';
 
